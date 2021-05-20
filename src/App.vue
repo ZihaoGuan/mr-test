@@ -3,8 +3,9 @@
     <div class="wrapper1">
       <header>
         <div class="wrapper2">
-          <div id="cart" class="button-cart" :class="{show: this.hover}">
+          <div id="cart" class="button-cart" :class="{ show: this.hover }">
             <span
+              style="color: #888888"
               class="button"
               @mouseover="hover = true"
               @mouseleave="hover = false"
@@ -14,7 +15,7 @@
               <div
                 class="button"
                 @mouseover="hover = true"
-                @mouseleave="hover = false"           
+                @mouseleave="hover = false"
               >
                 My Cart ( 4 )
               </div>
@@ -53,16 +54,6 @@ export default {
   },
   data() {
     return { hover: false };
-  },
-  methods: {
-    showCart() {
-      this.hover = true;
-      document.getElementById("cart").classList.add("show");
-    },
-    hideCart() {
-      this.hover = false;
-      document.getElementById("cart").classList.remove("show");
-    },
   },
 };
 </script>
@@ -113,8 +104,8 @@ p
 hr
   border: none
   height: 0.2px
-  color: rgba(0, 0, 0, 0.137)
-  background-color: rgba(0, 0, 0, 0.137)
+  color: rgba(0, 0, 0, 0.03)
+  background-color: rgba(0, 0, 0, 0.03)
 
 .button
   font-size:10px
@@ -128,15 +119,14 @@ hr
   vertical-align: center
 
   &.show > ul
-    visibility: visible
     display: block
-    
+
 
   ul
     list-style: none
-    visibility: hidden
+    display: none
     position: absolute
-    
+
     right: 0
     top: 29px
     display: none
