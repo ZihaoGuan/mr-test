@@ -8,15 +8,13 @@
               class="button"
               @mouseover="hover = true"
               @mouseleave="hover = false"
-              
               >My Cart ( 4 )</span
             >
             <ul class="dropdown">
               <div
                 class="button"
                 @mouseover="hover = true"
-                @mouseleave="hover = false"
-                
+                @mouseleave="hover = false"           
               >
                 My Cart ( 4 )
               </div>
@@ -185,4 +183,6 @@ hr
   .button-cart
     li
       width: 80vw
+  hr
+    visibility: hidden
 </style>

@@ -12,11 +12,11 @@
         JKAHSJKF HSJKDF Hdffd HJF HSJKDHF JKAHSJKF HSJKDF FSDF
       </p>
 
-      <div style="font-size:12px; padding-bottom:10px">
+      <div class= "size-title">
         SIZE<span style="color:#C90000">*</span
         ><span id="selected-size">{{ this.size }}</span>
       </div>
-      <div style="padding-bottom:20px">
+      <div class="button-group">
         <button
           class="btn-size"
           :class="{ selected: this.size === 'S' }"
@@ -81,6 +81,12 @@ button
   outline: none
   background: white
 
+.size-title
+  font-size:12px 
+  padding-bottom:10px
+
+.button-group
+  padding-bottom:20px
 
 .btn-size
   width: 3em
@@ -100,6 +106,7 @@ button
   padding: 0 2em
   font-weight: bolder
   &:hover
+    transition: all 0.2s ease
     color: white
     background: black
 
